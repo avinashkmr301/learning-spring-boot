@@ -3,17 +3,20 @@ package com.yourname.learningspringboot.service;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.eq;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
-
 import com.yourname.learningspringboot.dao.FakeDataDao;
 import com.yourname.learningspringboot.model.User;
 import com.yourname.learningspringboot.model.User.Gender;
+
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-import jersey.repackaged.com.google.common.collect.ImmutableList;
+
+import com.google.common.collect.ImmutableList;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
